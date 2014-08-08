@@ -35,9 +35,11 @@ var app = {
     
     onDeviceReady: function() {
        // app.receivedEvent('deviceready');
+       alert("check device ready");
        navigator.geolocation.getCurrentPosition(onSuccess, onError); 
     },
     onSuccess: function(postion){
+        alert("success");
         var longitude = position.coords.longitude
         var latitude = position.coords.latitude;
         var latlong= new google.maps.LatLng(latitude, longitude);
