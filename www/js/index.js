@@ -50,6 +50,12 @@ var app = {
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var map=new google.maps.Map(document.getElementById("geolocation"), mapOptions);
+        var marker = new google.maps.Marker({
+                                                    position: new google.maps.LatLng(latitude, longitude),
+                                                    map: map,
+                                                    title:"I am here!"
+                                                    });
+
     },
     onError: function(error){
         alert('code: ' + error.code + '\n' + 'message: ' +error.message + '\n');
