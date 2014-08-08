@@ -36,7 +36,7 @@ var app = {
     onDeviceReady: function() {
        // app.receivedEvent('deviceready');
        alert("check device ready");
-       navigator.geolocation.getCurrentPosition(onSuccess, onError); 
+       navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError); 
     },
     onSuccess: function(postion){
         alert("success");
