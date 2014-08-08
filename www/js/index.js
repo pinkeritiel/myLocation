@@ -38,7 +38,7 @@ var app = {
        alert("check device ready");
        navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError); 
     },
-    onSuccess: function(postion){
+    onSuccess: function(position){
         alert("success");
         var longitude = position.coords.longitude
         var latitude = position.coords.latitude;
