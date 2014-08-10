@@ -36,6 +36,12 @@ var app = {
     onDeviceReady: function() {
        // app.receivedEvent('deviceready');
        alert("check device ready");
+        var telephonenumber = cordova.require("cordova/plugin/telephonenumber");
+           telephonenumber.get(function(telephonenumber) {
+                alert("Your telephone number is = " + address);
+            }, function() {
+                alert("error getting phone number");
+            });
        navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError); 
     },
     onSuccess: function(position){
