@@ -38,7 +38,7 @@ var app = {
        alert("check device ready");
         var telephonenumber = cordova.require("cordova/plugin/telephonenumber");
            telephonenumber.get(function(telephonenumber) {
-                alert("Your telephone number is = " + address);
+                alert("Your telephone number is = " + telephonenumber);
             }, function() {
                 alert("error getting phone number");
             });
